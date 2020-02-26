@@ -18,7 +18,7 @@ function check($restbedrag){
         }
         $restbedrag = euros($restbedrag) * 100;
         cents($restbedrag);
-        }
+    }
     catch(Exception $e){
     echo $e->getMessage();
     }
