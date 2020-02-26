@@ -13,9 +13,9 @@ function check($restbedrag){
         if( !is_numeric($restbedrag) || $restbedrag == "" || $restbedrag == null) {
             throw new Exception("Je hebt geen bedrag meegegeven dat omgewisseld kan worden");
         }
-                    if($restbedrag <= 0){
-                        throw new Exception("ik kan geen negatief bedrag wisselen");
-                    }
+        if($restbedrag <= 0) {
+            throw new Exception("ik kan geen negatief bedrag wisselen");
+        }
         $restbedrag = euros($restbedrag) * 100;
         cents($restbedrag);
 }
